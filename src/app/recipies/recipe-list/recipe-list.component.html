@@ -7,23 +7,12 @@
   <hr />
   <div class="row">
     <div class="col-md-12">
-      <a href="#" class="list-group clearfix" *ngFor="let recipe of recipes">
-        <div class="list-group-item">
-          <div class="float-md-start">
-            <h4 class="">{{ recipe.name }}</h4>
-            <p class="">{{ recipe.description }}</p>
-          </div>
-          <div class="float-md-end">
-            <img
-              [src]="recipe.imagePath"
-              alt="{{ recipe.name }}"
-              class="img-responsive"
-              style="max-height: 50px"
-            />
-          </div>
-        </div>
-      </a>
+      <app-recipe-item
+        *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"
+        (recipeEvent)="getRecepie(recipeEl)"
+      >
+      </app-recipe-item>
     </div>
   </div>
-  <app-recipe-item></app-recipe-item>
 </section>

@@ -1,1 +1,16 @@
-<p>recipe-item works!</p>
+<a href="#" class="list-group clearfix" (click)="emitEvent()">
+  <div class="list-group-item">
+    <div class="float-md-start">
+      <h4 class="">{{ recipe.name }}</h4>
+      <p class="">{{ recipe.description }}</p>
+    </div>
+    <div class="float-md-end">
+      <img
+        [src]="recipe.imagePath"
+        alt="{{ recipe.name }}"
+        class="img-responsive"
+        style="max-height: 50px"
+      />
+    </div>
+  </div>
+</a>
