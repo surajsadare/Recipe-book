@@ -1,15 +1,19 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RecipeListService } from '../../recipe-list.service';
 
 @Component({
   selector: 'app-recipe-item',
   templateUrl: './recipe-item.component.html',
   styleUrls: ['./recipe-item.component.scss'],
 })
-export class RecipeItemComponent {
+export class RecipeItemComponent implements OnInit {
   @Input() recipe;
-  @Output() recipeEvent = new EventEmitter<void>();
+  constructor(private recipeListService: RecipeListService) {}
 
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   emitEvent() {
-    this.recipeEvent.emit();
+    this.recipeListService.recipeEvent.emit(this.recipe);
   }
 }
