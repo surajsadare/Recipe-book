@@ -10,13 +10,13 @@ export class RecipeListService {
       name: 'Burger',
       description: 'Try a once eat a daily',
       imagePath:
-        'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJHy3sDN8ktVdEsoGLX5HQwjDWpfYsm8259_cdIWWZYA&s',
     },
     {
       name: 'Pizza',
       description: 'Try a once eat a daily for sure',
       imagePath:
-        'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpISLzf2yeqCLYdGAm14256zLbsa4yI8hWEg&s',
     },
   ];
   constructor() {}

@@ -10,9 +10,7 @@ export class RecipeItemComponent implements OnInit {
   @Input() recipe;
   constructor(private recipeListService: RecipeListService) {}
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
   emitEvent() {
     this.recipeListService.recipeEvent.emit(this.recipe);
   }
