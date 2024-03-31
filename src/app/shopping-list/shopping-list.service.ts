@@ -19,6 +19,11 @@ export class ShoppingListService {
     const ingredient = { name: item, quantity: Number(qty) };
     this.ingredients.push(ingredient);
     console.log(this.ingredients);
-    this.addnewIngredients.emit(ingredient);
+    this.addnewIngredients.emit(this.ingredients.slice());
+  }
+
+  addIngredientsFromRecipe(ingredients) {
+    this.ingredients.push(...ingredients);
+    this.addnewIngredients.emit(this.ingredients.slice());
   }
 }
