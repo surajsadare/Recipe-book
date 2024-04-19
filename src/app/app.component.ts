@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
-  tab = 'recipe';
-  constructor() {}
-
-  changeTab(feature) {
-    this.tab = feature;
-  }
+  constructor(private router: Router) {}
 }

@@ -1,3 +1,9 @@
 .dropdown-menu-side {
   transform: translateX(-20%) !important;
 }
+.active {
+  background-color: rgb(201, 200, 200);
+  .txt {
+    color: white !important;
+  }
+}
