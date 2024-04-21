@@ -1,5 +1,5 @@
-<a class="list-group clearfix cursor" (click)="emitEvent()">
-  <div class="list-group-item">
+<a class="list-group clearfix cursor" routerLink="{{ index }}">
+  <div class="list-group-item" routerLinkActive="active">
     <div class="float-md-start">
       <h4 class="">{{ recipe.name }}</h4>
       <p class="">{{ recipe.description }}</p>
