@@ -15,22 +15,6 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <!-- <div appDropdown #r="appDropdown" class="dropdown btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle">
-        Mange Recipe <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
-        <li>
-          <a class="dropdown-item" href="">Add To Shop</a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="">Edit Recipe</a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="">Delete Recipe</a>
-        </li>
-      </ul>
-    </div> -->
     <div class="dropdown">
       <button
         class="btn btn-primary dropdown-toggle"
@@ -46,8 +30,10 @@
             >Add To Shop</a
           >
         </li>
-        <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
-        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+        <li>
+          <a class="dropdown-item" (click)="onEditRecipe()">Edit Recipe</a>
+        </li>
+        <li><a class="dropdown-item">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
