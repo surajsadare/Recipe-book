@@ -5,7 +5,6 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
   providedIn: 'root',
 })
 export class RecipeListService {
-  @Output() recipeEvent = new EventEmitter<any>();
   private recipes = [
     {
       name: 'Burger',
