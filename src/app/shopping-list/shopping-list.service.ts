@@ -10,6 +10,7 @@ export class ShoppingListService {
     { name: 'Grapes', quantity: 10 },
   ];
   addnewIngredients = new Subject<any>();
+  updateItem = new Subject<number>();
   constructor() {}
 
   getIngredients() {
@@ -17,7 +18,7 @@ export class ShoppingListService {
   }
 
   addIngredients(item, qty) {
-    const ingredient = { name: item, quantity: Number(qty) };
+    const ingredient = { name: item, quantity: qty };
     this.ingredients.push(ingredient);
     console.log(this.ingredients);
     this.addnewIngredients.next(this.ingredients.slice());
@@ -25,6 +26,14 @@ export class ShoppingListService {
 
   addIngredientsFromRecipe(ingredients) {
     this.ingredients.push(...ingredients);
+    this.addnewIngredients.next(this.ingredients.slice());
+  }
+
+  getUpdatedIngredients(index: number) {
+    return this.ingredients[index];
+  }
+  updateSelectedIngredients(index: number, item: any) {
+    this.ingredients[index] = item;
     this.addnewIngredients.next(this.ingredients.slice());
   }
 }
