@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+              />
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+              <button type="button" class="btn btn-primary me-3">
+                {{ isLoginForm ? "Login" : "Signup" }}
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                (click)="switchForm()"
+              >
+                Switch to {{ isLoginForm ? "Signup" : "Login" }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

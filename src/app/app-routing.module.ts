@@ -6,9 +6,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { NoRecipeSelectedYetComponent } from './recipies/no-recipe-selected-yet/no-recipe-selected-yet.component';
 import { RecipeDetailsComponent } from './recipies/recipe-details/recipe-details.component';
 import { AddNewRecipeComponent } from './recipies/add-new-recipe/add-new-recipe.component';
+import { LoginComponent } from './account/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'recipes',
     component: RecipiesComponent,
@@ -20,6 +21,7 @@ const routes: Routes = [
     ],
   },
   { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

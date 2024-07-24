@@ -10,10 +10,11 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeDetailsComponent } from './recipies/recipe-details/recipe-details.component';
 import { RecipeListComponent } from './recipies/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipies/recipe-list/recipe-item/recipe-item.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { NoRecipeSelectedYetComponent } from './recipies/no-recipe-selected-yet/no-recipe-selected-yet.component';
 import { AddNewRecipeComponent } from './recipies/add-new-recipe/add-new-recipe.component';
+import { LoginComponent } from './account/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,9 @@ import { AddNewRecipeComponent } from './recipies/add-new-recipe/add-new-recipe.
     DropdownDirective,
     NoRecipeSelectedYetComponent,
     AddNewRecipeComponent,
+    LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [DropdownDirective],
   bootstrap: [AppComponent],
 })
